@@ -214,7 +214,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(136,136,136,0.3), rgba(136,136,136,0.3)), url("https://images.pexels.com/photos/5836/yellow-metal-design-decoration.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://images.pexels.com/photos/54267/sunflower-blossom-bloom-flowers-54267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
