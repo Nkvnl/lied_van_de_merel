@@ -145,6 +145,10 @@ img::-moz-selection {
   font-size:80%;
 }
 
+.portfolio-h{
+  color:black!important;
+}
+
 .comp3{
   font-size:120%!important;
     font-family: 'Krona One', sans-serif!important;
