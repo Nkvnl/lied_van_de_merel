@@ -1,14 +1,14 @@
 var express    = require("express"); // call express
 var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
-var compressible = require('compressible')
+// var compressible = require('compressible')
 // const exphbs     = require("handlebars");
 var app        = express();
 
 
 
 app.set("view engine", "ejs");
-app.use(compressible());
+// app.use(compressible());
 
 // app.engine("handelbars", exphbs());
 app.use(express.static("public"));
