@@ -1,9 +1,10 @@
-var express    = require("express"); // call express
+var express = require("express"); // call express
 var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
+var emmet = require('emmet');
 // var compressible = require('compressible')
 // const exphbs     = require("handlebars");
-var app        = express();
+var app = express();
 
 
 
@@ -18,24 +19,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.get("/", function(req, res){
-    res.render("theme-blue");
+app.get("/", function(req, res) {
+    res.render("home");
 });
 
-app.get("/red", function(req, res){
-    res.render("theme-red");
+app.get("/over-ons", function(req, res) {
+    res.render("over-ons");
 });
 
-app.get("/green", function(req, res){
-    res.render("theme-green");
+app.get("/menu", function(req, res) {
+    res.render("menu");
 });
 
-app.get("/yellow", function(req, res){
-    res.render("theme-yellow");
+app.get("/locatie", function(req, res) {
+    res.render("locatie");
 });
 
-app.get("/test", function(req, res){
-    res.render("bedankt");
+app.get("/galerij", function(req, res) {
+    res.render("galerij");
 });
 
 app.post("/send", (req, res) => {
@@ -50,16 +51,16 @@ app.post("/send", (req, res) => {
     </ul>
     <p>${req.body.bericht}<p>
     `
-    
+
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    auth: {
-        user: 'mailserver163@gmail.com',
-        pass: 'ma1ls3rv3r'
-    }
-});
+        host: 'smtp.gmail.com',
+        port: 587,
+        auth: {
+            user: 'mailserver163@gmail.com',
+            pass: 'ma1ls3rv3r'
+        }
+    });
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"3DWD" <mailserver163@gmail.com>', // sender address
@@ -79,9 +80,9 @@ app.post("/send", (req, res) => {
 
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-        
+
         res.render("bedankt")
-        
+
     });
 });
 
@@ -118,6 +119,6 @@ app.post("/send", (req, res) => {
 //   smtpTransport.close(); 
 //     }); });
 
-app.listen(process.env.PORT, process.env.IP, function(){ // tell node to listen & define a port to view app
+app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
     console.log("3D Web Dev server starting...");
 });
